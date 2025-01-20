@@ -1,0 +1,409 @@
+
+@use './partials/global' as *;
+@use './partials/button' as *;
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
+
+
+
+/* Background color for header , body and footer */
+
+header, .container1__Nitrocoffee-CBimage , footer {
+    background-color: #FFF0ED ;
+    
+}
+
+.container2__our-products {
+    background-color: #F7F7F7 ;
+    
+}
+
+.container4__discountbox {
+    background-color: #FFF;
+}
+
+
+/* Container-1 (NITRO COFFEE | COFFEE BEAN-BAG-HERO) */
+
+
+.container1__Nitrocoffee-CBimage {
+    @include flex-center;   
+}
+
+.nitro-coffee__section, .hero-bag {
+    padding:0;
+    flex:1;
+    width: 50%;
+    display: flex;
+    justify-content: center; 
+    margin: 3.75rem 10rem; 
+}
+
+.nitro-coffee__section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 3.125rem;
+       
+}
+
+.nitro-coffee__title {
+    @include h1-h2-font;
+}
+
+.coffee__description {
+    @include para-font;
+}
+
+
+/* SHOP-NOW Button */
+
+
+.shop-now__button {
+    @include button-properties;
+}
+
+.shop-now__button--background-color {
+    @include button--background-color;
+}
+
+.shop-now__button--black-border{
+    @include button--black-border;     
+}
+
+
+.shop-now__button--background-color:active .shop-now__button--black-border{
+    transform: translate(0.313rem, 0.313rem);
+}
+
+
+/* Container-2 (OUR PRODUCTS | PRODUCT CARDS | VIEW ALL Button)  */
+
+
+.container2__our-products {
+    @include flex-center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1.25rem;
+    padding: 3.125rem 0;     
+}
+
+.our-products__title {
+    @include h1-h2-font;
+    margin-top: 0;
+}
+
+
+.product__name {
+   @include h3-nav-footer-font;
+}
+
+.product__size {
+    font-weight: lighter;
+}
+
+.product__price {
+    font-weight: bold ;
+    font-size: 2em ;
+    color: #5BACC3 ;   
+}
+
+/* Flexing 3 cards or sections in Our products container*/
+
+.our-products__article {
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 5%;
+    
+}  
+
+.our-products__card {
+    display : flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #FFF;
+    padding: 1.25rem 0 0 0;
+    box-shadow: 0 0.313rem 0.563rem -0.063rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.625rem;
+    flex:1 ;
+    margin: 2.5rem ;
+    width: 20.625rem;
+    height: 27.5rem;
+}
+
+
+/* Flexing sub-sections in cards i.e., image and product details */
+
+.card__subsection {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.card__details {
+    background-color: #FFF0ED;
+    border-bottom-left-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+}
+
+.card__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;  
+    padding: 0 1.25rem;  
+}
+    
+
+.column__flex {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    align-items: start;
+}
+
+.row__flex {
+    justify-content: flex-end;
+    
+}
+
+
+/* View All button */
+
+
+.view-all__button {
+    @include button-properties;
+}
+
+.view-all__button--background-color {
+    @include button--background-color;
+    margin:auto ;
+}
+
+.view-all__button--black-border {
+    @include button--black-border; 
+}
+
+.view-all__button--background-color:active .view-all__button--black-border {
+    transform: translate(0.313rem, 0.313rem);
+}
+
+
+
+/* Container-3 (WE'RE DIFFERENT | Icons | LEARN-MORE button | TILTED-CAN with background) */
+
+
+/* Flexing 2 sections we're Different and image */
+
+.container3__we-different {
+    @include flex-center;
+}
+
+.we-different__section, .tilted-can__section {
+    flex:1;
+    width: 50%;
+    display: flex;
+    justify-content: center; 
+    padding:0;
+    margin: 6.25rem 10rem; 
+}
+
+.we-different__section {
+    flex-direction: column;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 3.125rem;
+}
+
+
+/*  icons  */
+
+.container3__icon {
+    width: 3.125rem;
+}
+
+.icon__flex {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+
+
+/* Font styling */
+
+.we-different__section h2 {
+    @include h1-h2-font;
+} 
+
+.we-different__section p {
+    @include para-font;
+}
+
+
+
+
+/* LEARN MORE button */
+
+.learn-more__button {
+    @include button-properties;
+
+}
+
+.learn-more__button--background-color {
+    @include button--background-color;
+}
+
+.learn-more__button--black-border{
+    @include button--black-border;
+}
+
+
+
+.learn-more__button--background-color:active .learn-more__button--black-border{
+    transform: translate(0.313rem, 0.313rem);
+}
+
+
+/* Tilted can  */
+
+.tiltedcan__image {
+    height: 17.5rem;
+}
+
+
+.tilted-can__border {
+    @include flex-center;
+    width: 25rem;
+    height:25rem;
+    border: 0.313rem solid #5BACC3;
+    position: relative;    
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+  
+
+.tilted-can__border:hover .tilted-can__image{
+    animation: spin 2s infinite linear;
+}   
+
+.tilted-can__background-image {
+    background-image: url(../assests/images/coldbrewbackground.png);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    z-index: -1;
+}
+
+
+/* Container-4 DISCOUNT-BOX  */
+
+.container4__discount-box {
+    @include flex-center;
+    padding: 15rem;
+    position: relative;
+}
+
+.discount-box__section {
+    position: absolute;
+    width: 90%;
+    background-color: #393939;
+    color: white;
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 3.125rem;
+}
+
+@keyframes blink {
+    0%, 100% {background-color: #393939;}
+    50% {background-color: #5BACC3;}   
+}
+
+.discount-box__section {
+    animation: blink 2.30s linear infinite;
+}
+
+.discount-box__description {
+    font-size: 1em;
+}
+
+
+
+/* Footer (ADDRESS | HOURS | SOCIAL | Background ICONS) */
+
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+
+.footer__section {
+    padding: 0; 
+}
+    
+
+.footer__details {
+    display: flex;
+    padding: 5rem ;
+    flex-basis: 75%;
+    flex-grow: 1;
+    justify-content: space-between;   
+}
+
+.three-beans__icon {
+    width: 7.5rem;
+    opacity: 0.25;
+    object-fit: cover;
+}
+
+
+.beans__footer-leftimage {
+    margin-left: -2.5rem;
+    margin-top: 1.5rem;   
+}
+
+.beans__footer-rightimage {  
+    margin-right: -1.25rem;
+    margin-top: 3.25rem; 
+
+}
+
+.footer-info__heading {
+    font-size: 2.0625rem;
+    font-weight: lighter;
+}
+
+.footer-info__details {
+    font-weight: 400 ;
+    font-size: 1.125rem ;
+}
+
+.social__icon {
+    width: 3.125rem ;
+    height: 3.125rem ;
+}
+
+
+
+
+
+
+
+
+
+

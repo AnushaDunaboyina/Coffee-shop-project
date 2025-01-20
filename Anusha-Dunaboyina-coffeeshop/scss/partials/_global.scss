@@ -1,0 +1,55 @@
+
+@use "./variables" as *;
+@use "./mixins" as *;
+
+
+* {
+    padding :0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    @include body-font;
+}
+
+/* Header Navigation bar */
+
+#container__header, .nav-link__list {
+    @include flex-center;
+    list-style-type: none; 
+    align-items: baseline;
+    padding: 1.25rem;  
+    
+}
+
+
+.nav-link__list {
+    margin-left: auto;
+}
+
+.nitro__title {
+    @include h1-h2-font;
+    text-decoration-line: none;
+    color: $graphite;
+}
+
+.nitro__title:hover {
+    color: #5BACC3;
+}
+
+.nav-link {
+    text-decoration-line: none;
+    padding: 1.875rem ;
+    @include nav-link-button;
+    color: black;
+}
+
+.nav-link:hover {
+    color: #5BACC3;
+}
+
+.coffee-bean-logo {
+    width: 3.125rem ;
+}

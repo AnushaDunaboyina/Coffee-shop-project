@@ -1,0 +1,53 @@
+
+
+@use "./variables" as *;
+
+
+// == Body font ==
+
+@mixin body-font {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+// == FLEX ==
+
+@mixin flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;    
+}
+
+@mixin h1-h2-font {
+    font-size: $font-size-h1-h2;
+    font-weight: $font-weight-light;
+}
+
+@mixin h3-nav-footer-font {
+    font-size: $font-size-h3-nav-footer;
+    font-weight: $font-weight-light;
+}
+
+@mixin nav-link-button {
+    font-size: $font-size-nav-link-button;
+    font-weight: $font-weight-regular;
+}
+
+@mixin para-font {
+    font-size: $font-size-paragraph ;
+    font-weight: $font-weight-regular;
+}
+
+@mixin discount-box-font {
+    font-size: $font-size-discount;
+    font-weight: $font-weight-bold;
+}
+
+@mixin background-image-prop {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100% ;
+}

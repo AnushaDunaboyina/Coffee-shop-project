@@ -1,0 +1,41 @@
+
+@use "./variables" as *;
+@use "./mixins" as *;
+
+
+
+@mixin button-properties {
+    @include nav-link-button; 
+    border: none;
+    background-color: transparent; 
+    color: white;    
+}
+
+@mixin button--background-color {
+    padding: 1.875rem 0;
+    width: 11.25rem;
+    background-color: #5BACC3; 
+    position: relative; 
+    z-index: 1;     
+}
+
+
+@mixin button--black-border {
+    border: 0.125rem solid #393939; 
+    height: 100%; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute;
+    top: -0.313rem;
+    left: -0.313rem;
+    transition: transform 0.2s ease;
+}
+
+
+
+
+
+
+
