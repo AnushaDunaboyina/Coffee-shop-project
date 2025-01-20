@@ -1,0 +1,140 @@
+
+@use './partials/global' as *;
+@use './partials/button' as *;
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
+
+
+// Hero Container
+
+.hero-container {
+    background-image: url(../assests/images/coffee-circle.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100% ;
+    height: 43.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -2;   
+}
+
+.hero__title {
+    font-size: 3.75rem;
+    font-weight: 100;
+    color: #FFF;
+}
+
+.blue__border {
+    border: 0.313rem solid #5BACC3;
+    height: 12.5rem;
+    width: 18.75rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+
+.hero__title--background-color {
+    background-color: #393939;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0.938rem;
+    left: 0.938rem;
+    z-index: -1;
+}
+
+// Navigation list (HOT-DRINKS | COLD-DRINKS | PASTRIES)
+
+.sub-navlink__list {
+    background-color: #393939 ;
+    justify-content: center ;
+    bottom: 0;  
+}
+
+.sub-navlink__list {
+    list-style-type: none;
+    width: 100%;
+    height: 5rem;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.sub-navlink {
+    color: white;
+    font-size: 1.313rem;
+    font-weight: 400;
+    text-decoration: none; 
+    padding: 0 1.875rem;
+    border-left: 0.25rem solid #5BACC3;
+    text-transform: uppercase ;
+}
+
+
+
+/* All 3 containers Refreshments (Hot drinks, Cold drinks, Pastries) */
+
+.refreshments {
+    text-align: center;
+}
+
+section {
+    padding-left: 35.8%;
+    padding-right: 35.8%;
+    
+}
+
+.refreshments__h2 {
+    font-size: 3.75rem;
+    font-weight: 300;
+    padding: 1.25rem 0;
+  
+}
+
+.refreshments__h3 {
+    font-size: 2.063rem ;
+    font-weight: 300;
+    padding: 0.625rem 0;
+ }
+
+.refreshments__description {
+    font-size: 1.125rem; 
+    font-weight: 400;
+    padding-bottom: 0.625rem;
+    font-style: italic;
+ }
+
+.refreshments__price {
+    color : #5BACC3 ;
+    padding-bottom: 1.25rem;
+}
+
+/* Adding background colors to refreshment containers */
+
+.odd {
+    background-color: #FFF0ED;
+}
+
+.even {
+    background-color: white;
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
